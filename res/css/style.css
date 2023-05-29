@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+   
+  }
+  #menu{
+    height: 100px;
+    
+  }
+  #tittle{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    width: 60%;
+    margin-top: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  }
+  #setting{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    
+    
+  }
+  #setting_icon{
+    height: 50px;
+    width: 50px;
+    margin-left: 70%;
+    margin-top: 10px;
+  }
+  #home{
+    width: 20%;
+    margin-top: 10px;
+   font-size: 20px;
+   margin-left: 75px;
+    
+  }
+  #home_icon:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  }
+  
+  #setting_of_game{
+    width: 20%;
+  }
+  #home_icon{
+    width: 50px;
+    height: 50px;
+  }
+  
+  #setting_icon:hover{
+    animation-duration: 1s;
+    animation-name: example;
+    cursor: pointer;
+  }
+  @keyframes example {
+    from {rotate:calc(0deg);}
+    to {rotate:calc(90deg);}
+  }
+  #board{
+    width: 1200px;
+    margin: auto;
+    height: 1200px;
+    border: 1px solid black;
+    margin-top: 25px;
+    display: none;
+   
+    
+  }
+  #setting_inside{
+    
+    display: none;
+  }
+  .end{
+    text-align: center;
+   margin-top: 25px;
+   font-size: 30px;
+   font-weight: bold;
+  }
+  .pictures{
+    width: 60%;
+    margin: auto;
+    display: flex;
+  }
+  .divide_a{
+    width: 33%;
+   
+  }
+  .img_info{
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    border: 1px solid black;
+    border-radius: 10px;
+   
+  }
+  .aa{
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    }
+    .finish_of_game{
+      font-size: 30px;
+      margin-top: 35px;
+      text-align: center;
+    }
+  .column{
+display: flex;
+box-sizing: border-box;
+  }
+  .field, .field_a{
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+  }
+  .field_first{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    
+  }
+  .field_last{
+    margin-bottom: 50px;
+  }
+  .ocean, .destroyed_battleship, .ocean_empty{
+    width: 73px;
+    height: 73px;
+    position: absolute;
+
+  }
+  .destroyed_battleship{
+    display: none;
+    opacity: 0;
+    z-index: 10;
+  }
+  .ocean_empty{
+    display: none;
+  }
+  #play{
+    position: absolute;
+    left: 35%;
+    width: 30%;
+    height: 150px;
+   background-color: blue;
+    text-align: center;
+    top: 50%;
+    border: 2px solid black;
+    border-radius: 10px;
+    
+    
+  }
+  #play_button{
+    font-weight: bolder;
+    font-size: 50px;
+    padding-top: 7.5%;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  #play:hover{
+    cursor: pointer;
+  }
+  #score{
+    display: none;
+    position: absolute;
+    left: 95%;
+    top: 10%;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    
+  }
+  #score_score{
+    display: none;
+    position: absolute;
+    left: 87%;
+    top: 10%;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  #indicator{
+    display: none;
+    position: absolute;
+    left: 87%;
+    top: 15%;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    
+  }
+  #indicator_still{
+    display: none;
+    position: absolute;
+    left: 90%;
+    top: 15%;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  #win{
+    position: absolute;
+    font-size: 150px;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: blue;
+    padding: 100px;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    left: 25%;
+    top: 25%;
+    z-index: 11;
+    border-radius: 10px;
+    color: white;
+    display: none;
+  }

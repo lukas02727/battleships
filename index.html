@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png"  href="./res/img/battleship.jpg">
+    <link rel="stylesheet" href="./res/css/style.css">
+    <title>Battleships</title>
+</head>
+<body>
+    <div id="play">
+        <div id="play_button">PLAY</div>
+    </div>
+    <div id="menu">
+        <div id="setting">
+            <div id="home"><img id="home_icon" src="./res/img/home.jpg" alt=""></div>
+        <div id="tittle">Battleships</div>
+        <div id="setting_of_game"><img id="setting_icon" src="./res/img/setting.jpg" alt=""></div>
+    </div>
+    <div id="score_score">Skóre: </div>
+      <div id="score">0</div>
+      <div id="indicator">0</div>
+      <div id="indicator_still">/ 25</div>
+      <div id="setting_inside">
+        <div class="end">Informace</div>
+        <div class="pictures">
+            <div class="divide_a"><img class="img_info" src="./res/img/ocean.jpg" alt=""></div>
+            <div class="divide_a"><img class="img_info" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="divide_a"><img class="img_info" src="./res/img/battleboat_destroyed.jpg" alt=""></div>
+        </div>
+        <div class="pictures">
+            <div class="divide_a aa"><b>Oceán:</b> po kliknutí se zobrazí buď ikona prázdného oceánu, což znamená netrefení nebo zničená loď, což znamená zásah</div>
+            <div class="divide_a aa"><b>Prázdný oceán:</b> zobrazí se, pokud kliknete na pole s oceánem, ale neskrývá se pod ním žádná loď. Dává <b>-5 skóre</b>.</div>
+            <div class="divide_a aa"><b>Zničená loď:</b> zobrazí se, pokud kliknete na pole s oceánem, pod kterým se loď ukrývá. Znamená to, že jste zničili nepřátelskou loď. Dává <b>+50 skóre</b>.</div>
+        </div>
+        <div class="finish_of_game">! <b>Cíl hry: </b>Nasbírat co nejvyšší skóre a najít všech 25 nepřátelských lodí. !</div>
+    </div>
+       <div id="board">
+        <div id="win">Potopil jsi všechny nepřátelské lodě</div>
+        
+        <div class="column">
+            <div class="field"></div>
+            <div class="field_a field_first">1</div>
+            <div class="field_a field_first">2</div>
+            <div class="field_a field_first">3</div>
+            <div class="field_a field_first">4</div>
+            <div class="field_a field_first">5</div>
+            <div class="field_a field_first">6</div>
+            <div class="field_a field_first">7</div>
+            <div class="field_a field_first">8</div>
+            <div class="field_a field_first">9</div>
+            <div class="field_a field_first">10</div>
+            <div class="field_a field_first">11</div>
+            <div class="field_a field_first">12</div>
+            <div class="field_a field_first">13</div>
+            <div class="field_a field_first">14</div>
+            <div class="field_a field_first">15</div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">A</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">B</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">C</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">D</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">E</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">F</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">G</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">H</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+        </div>
+        <div class="column">
+            <div class="field_a field_first">I</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">J</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+        </div>
+        <div class="column">
+            <div class="field_a field_first">K</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">L</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">M</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">N</div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+        <div class="column">
+            <div class="field_a field_first">O</div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+            <div class="field field_last"><img class="ocean" src="./res/img/ocean.jpg" alt=""><img class="destroyed_battleship" src="./res/img/battleboat_destroyed.jpg" alt=""><img class="ocean_empty" src="./res/img/ocean_empty.jpg" alt=""></div>
+
+        </div>
+       </div>
+     
+
+
+
+    <script src="./res/js/main.js"></script>
+</body>
+</html>
